@@ -22,7 +22,7 @@ namespace etb {
     using namespace eosio;
     using std::string;
     using eosio::asset;
-    using eosio::symbol_type;
+    using eosio::symbol;
 
     typedef double real_type;
 
@@ -33,15 +33,15 @@ namespace etb {
 
         void create(account_name payer, account_name exchange_account, asset eos_supply, account_name  token_contract,  asset token_supply);
 
-        void buytoken(account_name payer, asset eos_quant,account_name token_contract, symbol_type token_symbol, account_name fee_account,int64_t fee_rate);
+        void buytoken(account_name payer, asset eos_quant,account_name token_contract, symbol token_symbol, account_name fee_account,int64_t fee_rate);
 
         void selltoken(account_name receiver,account_name token_contract, asset quant ,account_name fee_account,int64_t fee_rate);
 
-        void addtoken( account_name account,asset quant,account_name token_contract, symbol_type token_symbol );
+        void addtoken( account_name account,asset quant,account_name token_contract, symbol token_symbol );
 
-        void subtoken( account_name account,asset quant,account_name token_contract, symbol_type token_symbol );
+        void subtoken( account_name account,asset quant,account_name token_contract, symbol token_symbol );
 
-        void setparam(account_name token_contract,symbol_type token_symbol, string paramname, string param);
+        void setparam(account_name token_contract,symbol token_symbol, string paramname, string param);
 
         void pause();
 
